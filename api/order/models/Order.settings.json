@@ -1,0 +1,41 @@
+{
+  "connection": "default",
+  "collectionName": "order",
+  "info": {
+    "name": "order",
+    "description": "hybrid orders"
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "referenceId": {
+      "unique": true,
+      "required": true,
+      "type": "string"
+    },
+    "expectedDeliveryDate": {
+      "type": "date"
+    },
+    "status": {
+      "default": "pending",
+      "type": "string",
+      "required": true
+    },
+    "user": {
+      "model": "user",
+      "plugin": "users-permissions"
+    },
+    "itemizeds": {
+      "collection": "itemized",
+      "via": "order"
+    },
+    "userId": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/itemizeds",
+      "handler": "Itemized.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/itemizeds/count",
+      "handler": "Itemized.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/itemizeds/:_id",
+      "handler": "Itemized.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/itemizeds",
+      "handler": "Itemized.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/itemizeds/:_id",
+      "handler": "Itemized.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/itemizeds/:_id",
+      "handler": "Itemized.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "connection": "default",
+  "collectionName": "itemized",
+  "info": {
+    "name": "itemized",
+    "description": "itemized products in an order"
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "quantity": {
+      "type": "integer",
+      "required": true
+    },
+    "salesPrice": {
+      "type": "decimal",
+      "required": true
+    },
+    "product": {
+      "model": "product"
+    },
+    "order": {
+      "model": "order",
+      "via": "itemizeds"
+    }
+  }
+}

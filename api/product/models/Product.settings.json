@@ -1,0 +1,30 @@
+{
+  "connection": "default",
+  "collectionName": "product",
+  "info": {
+    "name": "product",
+    "description": "hybrid products"
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "name": {
+      "unique": true,
+      "required": true,
+      "type": "string"
+    },
+    "costPrice": {
+      "type": "decimal",
+      "required": true
+    },
+    "productRefId": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    }
+  }
+}
