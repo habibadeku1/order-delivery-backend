@@ -2,16 +2,18 @@
   "defaultConnection": "default",
   "connections": {
     "default": {
-      "connector": "strapi-hook-mongoose",
+      "connector": "strapi-hook-bookshelf",
       "settings": {
-        "client": "mongo",
-        "host": "${process.env.DATABASE_HOST || '127.0.0.1'}",
-        "port": "${process.env.DATABASE_PORT || 27017}",
-        "database": "${process.env.DATABASE_NAME || 'strapi'}",
-        "username": "${process.env.DATABASE_USERNAME || ''}",
-        "password": "${process.env.DATABASE_PASSWORD || ''}"
+        "client": "postgres",
+        "host": "hybriddbinstancestage.ccg0komfeibn.us-east-2.rds.amazonaws.com",
+        "port": 5432,
+        "database": "hybrid_strapi_stage",
+        "username": "hybrid_strapi_stage",
+        "password": "CrFRXNBLQKFMvEY585aQ"
       },
-      "options": {}
+      "options": {
+        "ssl": false
+      }
     }
   }
 }

@@ -2,16 +2,18 @@
   "defaultConnection": "default",
   "connections": {
     "default": {
-      "connector": "strapi-hook-mongoose",
+      "connector": "strapi-hook-bookshelf",
       "settings": {
-        "client": "mongo",
-        "host": "127.0.0.1",
-        "port": 27017,
-        "database": "order-delivery-db",
-        "username": "",
-        "password": ""
+        "client": "postgres",
+        "host": "hybriddbinstancedev.ccg0komfeibn.us-east-2.rds.amazonaws.com",
+        "port": 5432,
+        "database": "hybrid_strapi_dev",
+        "username": "hybrid_strapi_dev",
+        "password": "CrFRXNBLQKFMvEY585aQ"
       },
-      "options": {}
+      "options": {
+        "ssl": false
+      }
     }
   }
 }
